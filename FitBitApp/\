@@ -1372,16 +1372,16 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 	 * Set the user date from the JFormattedTextField.
 	 * This sets the String array's 3 respective elements
 	 * 
-	 * @param userInput JFormattedTextField object
+	 * @param userInput
 	 */
 	public void setUserDate(JFormattedTextField userInput) {
 		String in = userInput.getText();
 		if (in == null) {
-            Date date = new Date();
-            this.userDate[0] = String.valueOf(date.getYear());
-            this.userDate[1] = String.valueOf(date.getMonth());
-            this.userDate[2] = String.valueOf(date.getDay());
-        }
+            Date date=new Date();
+            this.userDate[0] = String.valueOf(Date.getYear());
+            this.userDate[1] = String.valueOf(Date.getMonth());
+            this.userDate[2] = String.valueOf(Date.getDay());
+		}
 		else {
 			this.userDate[0] = in.substring(0, 3);
 			this.userDate[1] = in.substring(6, 7);
