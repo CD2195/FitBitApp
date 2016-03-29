@@ -30,6 +30,7 @@ import javax.swing.text.MaskFormatter;
 import javax.swing.UIManager;
 import javax.swing.BoxLayout;
 import javax.swing.JTextArea;
+import java.util.Calendar;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -39,6 +40,7 @@ import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.SystemColor;
 import java.awt.event.KeyEvent;
+import java.util.Calendar;
 import java.util.Date;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -147,8 +149,27 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		RefreshTokens.setUnits(userSettings.getUnits());
 		// //////////////TESTING OBJECT SERIALIZATION//////////////
 
+		String curYear = Calendar.getInstance().get(Calendar.YEAR) + "";
+		int intMonth = Calendar.getInstance().get(Calendar.MONTH)+1;
+		
+		int intDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH) ;
+		String curMonth="";
+		String curDay="";
+		if (intMonth<10)
+			curMonth = "0"+intMonth;
+		else
+			curMonth = intMonth +"";
+				
+
+		if (intDay<10)
+			curDay = "0"+intDay;
+		else
+			curDay = intDay +"";
+			
+	
+			
 		// Create the API classes and the relevant variables associated with each
-		 heartrate = fitbit.getHeartActivity("2016", "01", "29");
+		 heartrate = fitbit.getHeartActivity(curYear, curMonth, curDay);
 		 outOfRange = heartrate.getOutOfRange();
 		 fatBurn = heartrate.getFatBurn();
 		 cardio = heartrate.getCardio();
@@ -166,7 +187,7 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		 lifeFloors = bestlife.getLifeFloors();
 		 lifeSteps = bestlife.getLifeSteps();
 
-		 daily = fitbit.getDailyActivity("2016", "01", "29");
+		 daily = fitbit.getDailyActivity(curYear, curMonth, curDay);
 		 floors = daily.getFloors();
 		 steps = daily.getSteps();
 		 distance = daily.getDistance();

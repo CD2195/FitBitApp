@@ -151,6 +151,7 @@ public class FitbitAPI implements Fitbit
 			// API Request
 			String requestUrlPrefix = "https://api.fitbit.com/1/user/3WGW2P/activities/heart/date/";
 			String requestUrl = requestUrlPrefix + year + "-" + month + "-" + day + "/" + "1d" + ".json";
+			System.out.println(requestUrl);
 			String jsonResult = RefreshTokens.getTokens(requestUrl);
 
 			// Get information via JSON string result
