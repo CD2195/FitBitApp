@@ -39,6 +39,7 @@ import java.awt.GridLayout;
 import java.awt.Point;
 import java.awt.SystemColor;
 import java.awt.event.KeyEvent;
+import java.util.Calendar;
 import java.util.Date;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -146,9 +147,15 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		}
 		RefreshTokens.setUnits(userSettings.getUnits());
 		// //////////////TESTING OBJECT SERIALIZATION//////////////
+		
+		String curYear = Calendar.getInstance().get(Calendar.YEAR) + "";
+		String curMonth = Calendar.getInstance().get(Calendar.MONTH) + "";
+		String curDay = Calendar.getInstance().get(Calendar.DAY) + "";
+		
+		
 
 		// Create the API classes and the relevant variables associated with each
-		 heartrate = fitbit.getHeartActivity("2016", "01", "29");
+		 heartrate = fitbit.getHeartActivity(curYear, curMonth, curDay);
 		 outOfRange = heartrate.getOutOfRange();
 		 fatBurn = heartrate.getFatBurn();
 		 cardio = heartrate.getCardio();
@@ -166,7 +173,7 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		 lifeFloors = bestlife.getLifeFloors();
 		 lifeSteps = bestlife.getLifeSteps();
 
-		 daily = fitbit.getDailyActivity("2016", "01", "29");
+		 daily = fitbit.getDailyActivity(curYear, curMonth, curDay);
 		 floors = daily.getFloors();
 		 steps = daily.getSteps();
 		 distance = daily.getDistance();
