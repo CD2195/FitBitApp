@@ -30,6 +30,7 @@ import javax.swing.text.MaskFormatter;
 import javax.swing.UIManager;
 import javax.swing.BoxLayout;
 import javax.swing.JTextArea;
+import java.util.Calendar;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -154,6 +155,25 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		
 		
 
+		String curYear = Calendar.getInstance().get(Calendar.YEAR) + "";
+		int intMonth = Calendar.getInstance().get(Calendar.MONTH)+1;
+		
+		int intDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH) ;
+		String curMonth="";
+		String curDay="";
+		if (intMonth<10)
+			curMonth = "0"+intMonth;
+		else
+			curMonth = intMonth +"";
+				
+
+		if (intDay<10)
+			curDay = "0"+intDay;
+		else
+			curDay = intDay +"";
+			
+	
+			
 		// Create the API classes and the relevant variables associated with each
 		 heartrate = fitbit.getHeartActivity(curYear, curMonth, curDay);
 		 outOfRange = heartrate.getOutOfRange();
