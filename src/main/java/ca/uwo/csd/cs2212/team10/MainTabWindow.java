@@ -149,13 +149,8 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		RefreshTokens.setUnits(userSettings.getUnits());
 		// //////////////TESTING OBJECT SERIALIZATION//////////////
 		
-		String curYear = Calendar.getInstance().get(Calendar.YEAR) + "";
-		String curMonth = Calendar.getInstance().get(Calendar.MONTH) + "";
-		String curDay = Calendar.getInstance().get(Calendar.DAY) + "";
-		
-		
-
-		String curYear = Calendar.getInstance().get(Calendar.YEAR) + "";
+        
+        String curYear = Calendar.getInstance().get(Calendar.YEAR) + "";
 		int intMonth = Calendar.getInstance().get(Calendar.MONTH)+1;
 		
 		int intDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH) ;
