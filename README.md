@@ -63,7 +63,7 @@ You can view our video demonstration here: [https://youtu.be/AOTz6X3l6Qc](https:
 The Java Documentation for the program can be found in the `doc` directory.
 
 
-# Contributors
+# Developers
 * Neeraja Dharan
 * Conor Dunne
 * Gustavo Murcia
