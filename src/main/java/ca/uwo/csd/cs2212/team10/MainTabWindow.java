@@ -1331,7 +1331,11 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 			}
 		});
 	}
-	
+    
+    /**
+     * This method saves user settings when the parent frame (MainWindow) is cloed
+     * @throws Exception as this method performs IO operations
+     */    
 	public void onCloseAction() throws Exception{
 		//When the parent frame (MainWindow) is closed, this method will be executed to save user setting
 		this.updatePointArray(this.heartRateFrame, this.calBurnFrame, this.activeMinFrame, this.sedMinFrame);
@@ -1341,19 +1345,35 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		objSerial.storeUserSettings(userSettings);
 		//hopefully this works
 	}
-
+    
+    /**
+     * This method returns the user settings
+     * @return UserSettings object
+     */
 	public UserSettings getUserSettings() {
 		return userSettings;
 	}
-
+    
+    /**
+     * This method sets the user settings object to this class
+     * @param userSettings UserSettings object
+     */
 	public void setUserSettings(UserSettings userSettings) {
 		this.userSettings = userSettings;
 	}
-
+    
+    /**
+     * This method returns an ObjectSerialization object
+     * @return ObjectSerialization object
+     */
 	public ObjectSerialization getObjSerial() {
 		return objSerial;
 	}
-
+    
+    /**
+     * This method sets an ObjectSerialization object to this class
+     * @param objSerial ObjectSerialization object
+     */
 	public void setObjSerial(ObjectSerialization objSerial) {
 		this.objSerial = objSerial;
 	}
@@ -1419,6 +1439,10 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		return this.userDate;
 	}
 	
+    /**
+     * This methods sets the date from a correctly formatted string
+     * @param dateFormat String containg the formatted date ("dd/mm/yyyy")
+     */
 	private void setDateSetting(String dateFormat)
 	{
 
@@ -1431,7 +1455,12 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 			this.dateSetting = 1;
 		}
 	}
-
+    
+    /**
+     * This method creates a formatter from a string and returns a MaskFormatter object
+     * @param s String
+     * @return MaskFormatter object
+     */
 	protected MaskFormatter createFormatter(String s)
 	{
 		MaskFormatter formatter = null;
@@ -1446,7 +1475,14 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		}
 		return formatter;
 	}
-
+    
+    /**
+     * This method sets an array of point objects
+     * @param heartPoint Point object
+     * @param calPoint Point object
+     * @param activePoint Point object
+     * @param sedPoint Point object
+     */
 	private void setPointArray(Point heartPoint, Point calPoint, Point activePoint, Point sedPoint)
 	{
 		this.pointArray[1] = heartPoint;
@@ -1455,12 +1491,23 @@ public MainTabWindow(Fitbit fitbit1) throws Exception
 		this.pointArray[4] = sedPoint;
 		
 	}
-
+    
+    /**
+     * This method returns a Point array
+     * @return Array of point objects
+     */
 	private Point[] getPointArray()
 	{
 		return this.pointArray; // This should probably be a copy, to maintain security (?)
 	}
 	
+    /**
+     * This method updates the point array
+     * @param heart JInternalFrame
+     * @param cal JInternalFrame
+     * @param min JInternalFrame
+     * @param sed JInternalFrame
+     */
 	private void updatePointArray(
 			JInternalFrame heart, JInternalFrame cal, JInternalFrame min, JInternalFrame sed)
 	{

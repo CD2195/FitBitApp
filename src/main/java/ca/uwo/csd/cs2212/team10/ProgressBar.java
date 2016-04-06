@@ -48,6 +48,10 @@ import javax.swing.JComponent;
 		}
 
 		@Override
+        /**
+         * This method paints the progress bar
+         * @param g Graphics object
+         */
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			//Graphics2D g2 = (Graphics2D) g;

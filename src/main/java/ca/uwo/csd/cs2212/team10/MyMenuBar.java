@@ -13,6 +13,10 @@ import javax.swing.JMenuBar;
 public class MyMenuBar extends JMenuBar {
 
     @Override
+    /**
+     * This method draws the menu bar on the screen
+     * @param g Graphics object
+     */
     protected void paintComponent(Graphics g) {
 
         super.paintComponent(g);
