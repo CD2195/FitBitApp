@@ -1,5 +1,5 @@
 # Fitbit App
-## Developed by CS2212 Team 10 at Western University in London, Ontario, Canada
+## Developed by the CS2212 Team 10 at Western University in London, Ontario, Canada
 
 The Fitbit app is a desktop application that pulls and displays data from an authenticated user from Fitbit. The program has several features including: 
 * **Custom Daily Dashboard** - the dashboard displays your distance, steps taken, floors climbed, and calories burned on a daily basis, along with a goal set by the user from Fitbit. The data is displayed in a series of windows that can be added/removed, moved and resized.
@@ -12,7 +12,9 @@ The program is written in Java, and makes use of three APIs:
 * [Fitbit API](https://dev.fitbit.com/)
 * [Google Static Maps API](https://developers.google.com/maps/documentation/static-maps/)
 * [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/intro)
+
 Various libraries are used, such as the Java Swing libraries and JSON libraries. Maven is used to package the program into a jar file.
+
 
 # Install/Build
 
@@ -32,6 +34,7 @@ mvn package
 
 The jar can be found in `target/team10-FitBitApp-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
+
 # Getting Started
 
 The program has two modes; an online mode that interfaces with the FitBit API and a test mode that works offline with locally stored API data to test the program features without worring about being connected to the API. The normal online mode can be run with the following command from the `team10` directory: 
@@ -49,13 +52,16 @@ The command will run and open a new window displaying the FitBit App.
 
 NOTE: The Fitbit App was designed and best displayed on Mac OS X. 
 
+
 # Usage Example
 
 You can view our video demonstration here: [https://youtu.be/AOTz6X3l6Qc](https://youtu.be/AOTz6X3l6Qc)
 
+
 # Documentation
 
 The Java Documentation for the program can be found in the `doc` directory.
+
 
 # Contributors
 * Neeraja Dharan
