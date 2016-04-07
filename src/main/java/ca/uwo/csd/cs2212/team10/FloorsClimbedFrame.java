@@ -9,6 +9,9 @@ import java.awt.*;
  */
 public class FloorsClimbedFrame extends JPanel {
 
+    /**
+     * Main constructor
+     */
 	public FloorsClimbedFrame() {
 		// Change GridLayout to better organize the panel
 		super(new GridLayout(1, 1));

@@ -109,6 +109,7 @@ public class Map {
 
     /**
      * Method simply converts degrees into radians
+     * @param deg double radian value
      * @return double value in radians
      */
     private double degToRad(double deg) {
@@ -164,7 +165,7 @@ public class Map {
      * Method returns data gathered from URL
      * @param requestURL String containing the URL
      * @return String that contains data from the URL
-     * @throws IOException 
+     * @throws IOException as this method performs IO operations
      */
     private String readURL(String requestURL) throws IOException {
         BufferedReader reader = null;
@@ -281,7 +282,34 @@ public class Map {
     }
 
     /**
-     * Method returns an string of locations that have been achieved
+     * Method returf (dateFormat.equals("dd/mm/yyyy"))
+     * 1450         {
+     * 1451             this.dateSetting = 0;
+     * 1452         }
+     * 1453         else
+     * 1454         {
+     * 1455             this.dateSetting = 1;
+     * 1456         }
+     * 1457     }
+     * 1458 
+     * 1459     /**
+     * 1460      * This method creates a formatter from a string
+     * 1461      * @param s 
+     * 1462     protected MaskFormatter createFormatter(String s)
+     * 1463     {
+     * 1464         MaskFormatter formatter = null;
+     * 1465         try
+     * 1466         {
+     * 1467             formatter = new MaskFormatter(s);
+     * 1468         }
+     * 1469         catch (java.text.ParseException exc)
+     * 1470         {
+     * 1471             System.err.println("formatter is bad: " + exc.getMessage());
+     * 1472             System.exit(-1);
+     * 1473         }
+     * 1474         return formatter;
+     * 1475     }
+     * ns an string of locations that have been achieved
      * @return String of achieved Location object sorted by increasing distance
      */
     public String getAchievedLocations() {
