@@ -3,7 +3,7 @@
 
 The Fitbit app is a desktop application that pulls and displays data from an authenticated user from Fitbit. The program has several features including: 
 * **Custom Daily Dashboard** - the dashboard displays your distance, steps taken, floors climbed, and calories burned on a daily basis, along with a goal set by the user from Fitbit. The data is displayed in a series of windows that can be added/removed, moved and resized.
-* **Liftime Totals** - on a seperate page your lifetime distance, steps and floors are displayed.
+* **Lifetime Totals** - on a seperate page your lifetime distance, steps and floors are displayed.
 * **Best Days** - this page shows the days the user achieved their maximum distance, steps and floors with the maximum value achieved.
 * **Accolades** - this page has a table of 20 potential accomplishments with some that can be achieved daily or just once.
 * **Map** - the map puts your Lifetime distance to scale, with a current location set and the lifetime distance is compared to the distance from the location to other locations in the local database. Cities within the lifetime distance are marked on the map, which is zoomable.
