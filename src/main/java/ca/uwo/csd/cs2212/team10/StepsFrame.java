@@ -11,7 +11,10 @@ import java.awt.*;
  * @author UI Team
  */
 public class StepsFrame extends JPanel {
-
+    
+    /**
+     * Main constructor
+     */
 	public StepsFrame() {
 		// Change GridLayout to better organize the panel
 		super(new GridLayout(1, 1));
